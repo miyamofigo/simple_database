@@ -1,0 +1,7 @@
+[package]
+name = "simple_database"
+version = "0.1.0"
+authors = ["Takeo Miyamoto <miyamofigo@gmail.com>"]
+
+[dependencies]
+time = "0.1"
