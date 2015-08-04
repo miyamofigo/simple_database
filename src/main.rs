@@ -19,8 +19,8 @@ struct Item {
 impl Item { 
 
 	fn new(name: &str,
-				 date: &str,
-				 category: &str) -> Item {
+	date: &str,
+	category: &str) -> Item {
 
 		Item {
 			name: name.to_string(),
@@ -61,9 +61,9 @@ impl ToString for Item {
 	fn to_string(&self) -> String {
 
 		format!("{},{},{}",
-						self.name,
-						self.date,
-						self.category)
+		self.name,
+		self.date,
+		self.category)
 	}
 } 
 
@@ -134,12 +134,12 @@ fn print_usage() {
 	println!("  simdb cmd [categoryName]");
 	println!("  add     add item, followed by optional category");
 	println!("{}{}",
-					 "  latest  print last added item(s), followed by ",
-           "optional category");
+		 "  latest  print last added item(s), followed by ",
+           	 "optional category");
 	println!("  all     print all");
 	println!("{}{}", 
-					 "  For instance: add \"some item name\" ",
-					 "\"some category name\"");
+		 "  For instance: add \"some item name\" ",
+		 "\"some category name\"");
 }
 
 fn print_latest(input: &[String]) {
