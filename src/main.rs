@@ -85,8 +85,8 @@ fn add_item(input: &[String]) {
 	};
 
 	db.push_back(Item { name: input[0].clone(),
-										 	date: date.rfc3339().to_string(),
-											category: category });
+			    date: date.rfc3339().to_string(),
+			    category: category });
 	store(db);
 } 
 
@@ -111,8 +111,8 @@ fn load() -> LinkedList<Item> {
 
 		let mut strmap = raw_string.split(",").map(|str| str.to_string());
 		db.push_back(Item { name: strmap.nth(0).unwrap(),
-												date: strmap.nth(0).unwrap(),
-												category: strmap.nth(0).unwrap()}); 
+				    date: strmap.nth(0).unwrap(),
+				    category: strmap.nth(0).unwrap()}); 
 	}
 
 	db
